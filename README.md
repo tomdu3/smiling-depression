@@ -54,30 +54,26 @@ The ideal user for this website is:
 
 ### User-Stories
 #### Current User Goals
-As a current user:
-1. I want to find general information about smiling depression and its symptoms.
-2. I want to easily navigate through the site and access the information I require.
-3. I want to easily navigate to content I have previously viewed within a small number of steps.
-4. As a current user, I want to easily find the info and contact form for the Institute for Wellbeing.
+1. As a current user, I want to find general information about smiling depression and its symptoms so that I can keep myself informed and recognize the signs of this condition.
+2. As a current user, I want to easily navigate through the site and access the information I require so that I can find what I need quickly and without frustration.
+3. As a current user, I want to easily navigate to content I have previously viewed within a small number of steps so that I can review important details or resources.
+4. As a current user, I want to easily find the info and contact form for the Institute for Wellbeing so that I can request assistance or information.
 
 #### New User Goals
-As a new user:
-1. I want to easily navigate the entire site intuitively. 
-2. I want the information I seek to be easily accessible and relevant.
-3. I want attractive and relevant visuals and colour schemes that work with the content.
-4. I want to easily find the info and contact form for the Institute for Wellbeing.
+1. As a new user, I want to easily navigate the entire site intuitively so that I can understand its purpose and layout immediately.
+2. As a new user, I want the information I seek to be easily accessible and relevant so that I can quickly learn about smiling depression without sifting through clutter.
+3. As a new user, I want attractive and relevant visuals and colour schemes that work with the content so that I feel engaged and find the site aesthetically pleasing.
+4. As a new user, I want to easily find the info and contact form for the Institute for Wellbeing so that I can connect with professionals if needed.
 
 #### Goals of a Person Suffering of Smiling Depression
-As someone who suffers of smiling depression:
-1. I want to factually correct and relevant information about smiling depression and its symptoms.
-2. I want the information I seek to be easily accessible and relevant.
-3. I want to easily be able to find info about the Institute for Wellbeing and make contact.
+1. As someone who suffers from smiling depression, I want factually correct and relevant information about smiling depression and its symptoms so that I can understand what I am experiencing and realize I am not alone.
+2. As someone who suffers from smiling depression, I want the information I seek to be easily accessible and relevant so that I can find answers without feeling overwhelmed.
+3. As someone who suffers from smiling depression, I want to easily find info about the Institute for Wellbeing and make contact so that I can seek professional support and guidance.
 
 #### Goals of a Person working/living with someone suffering of smiling depression
-As someone who is working/living with a depressed person:
-1. I want to factually correct and relevant information about smiling depression and its symptoms.
-2. I want the information I seek to be easily accessible and relevant.
-3. I want to easily be able to find info about the Institute for Wellbeing and make contact on behalf of the person suffering of smiling depression.
+1. As someone who is working or living with a depressed person, I want factually correct and relevant information about smiling depression and its symptoms so that I can identify if my loved one or colleague needs help.
+2. As someone who is working or living with a depressed person, I want the information I seek to be easily accessible and relevant so that I can quickly learn how to support them.
+3. As someone who is working or living with a depressed person, I want to easily find info about the Institute for Wellbeing and make contact on behalf of the person suffering so that I can help them get professional assistance.
 
 ### Development Planes
 In order to provide a website that responds to the above mentioned user stories with the corresponding functionalities, the developer must present the smiling depression as a serious condition, the symptoms, the testimonials of this condition and give the opportunity for the user to require more info or help in that regard.
@@ -323,7 +319,9 @@ The selected imagery has been sourced and created from various sites. The Panthe
 
 [Back to top](#smiling-depression)
 
-## Deployment
+## Deployment & Local Development
+
+### GitHub Pages Deployment
 * The site was deployed to GitHub pages. The steps to deploy are as follows: 
   * In the GitHub repository, navigate to the **Settings** tab 
   * From the left side menu select **Pages**.
@@ -333,6 +331,26 @@ The selected imagery has been sourced and created from various sites. The Panthe
 The live link can be found here - https://tomdu3.github.io/smiling-depression/.
 
 *The site was previously deployed on the following address https://tomdu3.github.io/CI-project-1/, but the developer renamed the repository and subsequently the deployment live link was changed.*
+
+### Forking the Repository
+To make a copy of the original repository on your GitHub account to view and/or make changes without affecting the original repository:
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/tomdu3/smiling-depression).
+2. At the top right of the page, locate and click the **Fork** button.
+3. This will create a copy of the repository in your own GitHub account.
+
+### Cloning the Repository
+To create a local clone of this repository on your computer:
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/tomdu3/smiling-depression).
+2. Under the repository name, click on the **Code** dropdown button.
+3. To clone the repository using HTTPS, copy the link under **HTTPS** (e.g., `https://github.com/tomdu3/smiling-depression.git`).
+4. Open Git Bash (or your preferred terminal).
+5. Change the current working directory to the location where you want the cloned directory to be created.
+6. Type `git clone` followed by the URL you copied in Step 3:
+   ```bash
+   git clone https://github.com/tomdu3/smiling-depression.git
+   ```
+7. Press **Enter** to build your local clone.
+8. Since this is a static site containing only HTML, CSS, and basic JavaScript, you can run it locally by simply opening the `index.html` file in any web browser, or by using a local development server like VS Code's "Live Server" extension.
 
 ## Issues and Bugs 
 
@@ -365,52 +383,43 @@ The developer ran into several issues during the development of the website, wit
 ## Testing 
 ### User-Stories Testing
 #### Current User Goals
-1. As a current user, I want to find general information about smiling depression and its symptoms.
-* The Home Page has a few general information about the smiling depression.
-* The Symptoms Page has the information regading the general four symptoms of the smiling depression.
-* The Awareness Page has four videos related to the smiling depression. 
-2. As a current user, I want to easily navigate through the site and access the information I require.
-* The navigation bar is clearly defined and easily navigabale for users to find and use.
-* The footer menu is easy to use with recognizable icons on small screens and the text indication on bigger screens.
-3. As a current user, I want to easily navigate to content I have previously viewed within a small number of steps.
-* On all sites there's a navigation bar with links to each page.
-4. As a current user, I want to easily find the info and contact form for the Institute for Wellbeing.
-* On all pages there's a section with info about location with the accompanying image and Google Map. The first three pages have a Contact Us section and button that leads to the last Contact Us Page with a form to contact the Institute for Wellbeing.
+1. As a current user, I want to find general information about smiling depression and its symptoms so that I can keep myself informed and recognize the signs of this condition.
+* The Home Page has general information about smiling depression.
+* The Symptoms Page details the four key symptoms of smiling depression.
+* The Awareness Page features four relevant videos about the condition. 
+2. As a current user, I want to easily navigate through the site and access the information I require so that I can find what I need quickly and without frustration.
+* The navigation bar is clearly defined and easily navigable, allowing users to find key information.
+* The footer is responsive, displaying icons on mobile and full text on desktop screens.
+3. As a current user, I want to easily navigate to content I have previously viewed within a small number of steps so that I can review important details or resources.
+* Every page includes the navbar linking directly to all other pages, facilitating immediate retrieval.
+4. As a current user, I want to easily find the info and contact form for the Institute for Wellbeing so that I can request assistance or information.
+* Location info with Pantheon image and Google Map are displayed on the bottom of all pages. The Contact button in the page footer/main sections links directly to the callback request form.
 
 #### New User Goals
-1. As a new user, I want to easily navigate the entire site intuitively. 
-* The navigation bar is clearly defined and easily navigabale for users to find and use.
-* The footer menu is easy to use with recognizable icons on small screens and the text indication on bigger screens.
-2. As a new user, I want the information I seek to be easily accessible and relevant.
-* The navigation bar is clearly defined and easily navigabale for users to find and use.
-* The footer menu is easy to use with recognizable icons on small screens and the text indication on bigger screens.
-3. As a new user, I want attractive and relevant visuals and colour schemes that work with the content.
-* An interesting and calming palette was created by [Color Mind](http://colormind.io/).
-* The content related images were take from [Wikipedia](https://www.wikipedia.org/), while the other images are from [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/).
-4. As a new user, I want to easily find the info and contact form for the Institute for Wellbeing.
-* On all pages there's a section with info about location with the accompanying image and Google Map. The first three pages have a Contact Us section and button that leads to the last Contact Us Page with a form to contact the Institute for Wellbeing.
+1. As a new user, I want to easily navigate the entire site intuitively so that I can understand its purpose and layout immediately.
+* The navigation bar is visible and intuitive. Links react to hover and mark the current active page clearly.
+2. As a new user, I want the information I seek to be easily accessible and relevant so that I can quickly learn about smiling depression without sifting through clutter.
+* The homepage provides immediate high-level definitions, prompting users to dig deeper into Symptoms and Awareness pages.
+3. As a new user, I want attractive and relevant visuals and colour schemes that work with the content so that I feel engaged and find the site aesthetically pleasing.
+* The site uses a calming, cohesive palette generated by Color Mind with matching photography from Wikipedia, Pexels, and Unsplash.
+4. As a new user, I want to easily find the info and contact form for the Institute for Wellbeing so that I can connect with professionals if needed.
+* Contact forms and location cards are placed in clear, conventional segments, allowing new visitors to request callbacks instantly.
 
 #### Goals of a Person Suffering of Smiling Depression
-1. As someone who suffers of smiling depression, I want to factually correct and relevant information about smiling depression and its symptoms.
-* The Home Page has a few general information about the smiling depression.
-* The Symptoms Page has the information regading the general four symptoms of the smiling depression.
-* The Awareness Page has four videos related to the smiling depression. 
-2. As someone who suffers of smiling depression, I want the information I seek to be easily accessible and relevant.
-* The navigation bar is clearly defined and easily navigabale for users to find and use.
-* The footer menu is easy to use with recognizable icons on small screens and the text indication on bigger screens.
-3. As someone who suffers of smiling depression, I want to easily be able to find info about the Institute for Wellbeing and make contact.
-* On all pages there's a section with info about location with the accompanying image and Google Map. The first three pages have a Contact Us section and button that leads to the last Contact Us Page with a form to contact the Institute for Wellbeing.
+1. As someone who suffers from smiling depression, I want factually correct and relevant information about smiling depression and its symptoms so that I can understand what I am experiencing and realize I am not alone.
+* Articles on symptoms and documentary videos on the Awareness page describe actual lived experiences and symptoms.
+2. As someone who suffers from smiling depression, I want the information I seek to be easily accessible and relevant so that I can find answers without feeling overwhelmed.
+* The interface relies on spacious grids, clear visual headers, and left-aligned readable paragraphs.
+3. As someone who suffers from smiling depression, I want to easily find info about the Institute for Wellbeing and make contact so that I can seek professional support and guidance.
+* Every page contains the map and physical details, plus a CTA to the form to contact the staff easily.
 
 #### Goals of a Person working/living with someone suffering of smiling depression
-1. As someone who is working/living with a depressed person, I want to factually correct and relevant information about smiling depression and its symptoms.
-* The Home Page has a few general information about the smiling depression.
-* The Symptoms Page has the information regading the general four symptoms of the smiling depression.
-* The Awareness Page has four videos related to the smiling depression. 
-2. As someone who is working/living with a depressed person, I want the information I seek to be easily accessible and relevant.
-* The navigation bar is clearly defined and easily navigabale for users to find and use.
-* The footer menu is easy to use with recognizable icons on small screens and the text indication on bigger screens.
-3. As someone who is working/living with a depressed person, I want to easily be able to find info about the Institute for Wellbeing and make contact on behalf of the person suffering of smiling depression.
-* On all pages there's a section with info about location with the accompanying image and Google Map. The first three pages have a Contact Us section and button that leads to the last Contact Us Page with a form to contact the Institute for Wellbeing.
+1. As someone who is working or living with a depressed person, I want factually correct and relevant information about smiling depression and its symptoms so that I can identify if my loved one or colleague needs help.
+* Fact sheets and symptoms descriptions allow family members and colleagues to spot hidden depression signs.
+2. As someone who is working or living with a depressed person, I want the information I seek to be easily accessible and relevant so that I can quickly learn how to support them.
+* Pages reflow well across screen resolutions and allow fast access to help links.
+3. As someone who is working or living with a depressed person, I want to easily find info about the Institute for Wellbeing and make contact on behalf of the person suffering so that I can help them get professional assistance.
+* The callback form can be filled out with contact details to easily reach out for assistance on behalf of others.
 
 [Back to top](#smiling-depression)
 
@@ -609,6 +618,11 @@ My friends, family and co-workers were asked to review the site and documentatio
   * [Medical News Today](https://www.medicalnewstoday.com/articles/smiling-depression)
   * [Webmd](https://www.webmd.com/depression/smiling-depression-overview)
   * [Davidson Institute](https://www.davidsongifted.org/gifted-blog/dabrowskis-theory-and-existential-depression-in-gifted-children-and-adults/)
+
+### Documentation & Project Structure
+* Project README structure and user story alignment was designed based on the Code Institute Portfolio Project README template.
+* Instructions for repository Forking and Cloning were sourced from the [GitHub Documentation on Forking a Repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) and [GitHub Documentation on Cloning a Repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+* Markdown formatting and guide tables referenced from the [Markdown Guide](https://www.markdownguide.org).
 
 ## Code Features
 * Fonts used are from [Google Fonts](https://fonts.google.com/)
