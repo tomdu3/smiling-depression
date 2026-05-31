@@ -53,6 +53,11 @@ nav {
     margin: 0 auto;
 }
 
+.logo a {
+    text-decoration: none;
+    display: inline-block;
+}
+
 .nav-links {
     text-transform: uppercase;
     list-style: none;
@@ -129,7 +134,7 @@ nav {
 .short-info-text {
     margin: 20px 50px;
     font-size: 1.4rem;
-    text-align: center;
+    text-align: left;
 }
 
 .column {
@@ -334,8 +339,8 @@ article {
 }
 
 .article-text {
-    text-align: justify;
-    padding: 10px 10px;
+    text-align: left;
+    padding: 10px 25px;
     font-size: larger;
 }
 
@@ -387,10 +392,90 @@ article {
     padding: 10px;
 }
 
-/* videos taking 100% of the width of the container on smaller screens */
-iframe.video {
+/* Clickable video links with play overlays */
+.video-link {
+    text-decoration: none;
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    border: 3px solid #acc3e8;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(100, 124, 215, 0.3);
+}
+
+.video-thumbnail-wrapper {
+    position: relative;
     width: 100%;
-    height: 300px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    display: block;
+}
+
+.video-link:hover .video-thumbnail {
+    opacity: 0.8;
+}
+
+.play-overlay {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(135, 189, 216, 0.85);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.play-triangle {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid #354a54;
+    margin-left: 6px;
+    transition: border-left-color 0.3s ease;
+}
+
+.video-link:hover .play-overlay {
+    background-color: #acc3e8;
+    transform: scale(1.1);
+}
+
+.video-title-card {
+    padding: 15px;
+    text-align: center;
+    background-color: #daebe8;
+}
+
+.video-title-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #354a54;
+    font-family: 'Montserrat Alternates', sans-serif;
+    line-height: 1.4rem;
 }
 
 /* contact section */
@@ -452,6 +537,13 @@ iframe.video {
 
 label {
     text-align: left;
+}
+
+.optional-text {
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #6c757d;
+    margin-left: 5px;
 }
 
 .personal-details>div * {
@@ -641,11 +733,6 @@ textarea {
         font-size: 2rem;
     }
 
-    iframe.video {
-        width: 100%;
-        height: 400px;
-    }
-
     .contact-section {
         width: 80%;
     }
@@ -725,10 +812,6 @@ textarea {
     .video-container {
         padding: 20px 5px;
         width: 50%;
-    }
-
-    iframe.video {
-        width: 90%;
     }
 
     /* show contact-image on big screens */
