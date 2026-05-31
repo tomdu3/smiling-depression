@@ -79,20 +79,48 @@ nav {
     text-decoration: none;
     letter-spacing: 0.2rem;
     padding: 0.8rem;
-    transition: all ease-in-out 0.5s;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* effect on hover - increase size and border radius effect with background highlighting*/
+/* Sleek lift effect on hover */
 .nav-links a:hover {
-    background-color: #acc3e8;
-    border-radius: 40%;
-    padding: 0.5rem;
-    transform: scale(1.2);
+    color: #647cd7;
+    transform: translateY(-2px);
 }
 
-/* a simple underline effect for the active page in menu not to collide with hover effect */
-.active {
-    text-decoration: underline;
+/* Sliding underline animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 4px;
+    left: 50%;
+    background-color: #647cd7;
+    transition: width 0.3s ease, left 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+    width: 60%;
+    left: 20%;
+}
+
+/* Professional slide underline for the active page */
+.active a::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    bottom: 4px;
+    left: 20%;
+    background-color: #354a54;
+    border-radius: 2px;
+}
+
+.active a {
+    font-weight: bold;
 }
 
 /* hero image */
