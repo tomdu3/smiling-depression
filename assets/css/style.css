@@ -54,6 +54,34 @@ body {
     min-height: 100vh;
     max-width: 1400px;
     background-color: var(--color-bg);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Floating soft background blobs for radical depth */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: -1;
+    opacity: 0.07;
+    pointer-events: none;
+}
+
+body::before {
+    background-color: var(--color-primary);
+    top: -15%;
+    right: -10%;
+}
+
+body::after {
+    background-color: var(--color-teal);
+    bottom: -15%;
+    left: -10%;
 }
 
 *,
@@ -72,13 +100,21 @@ h4 {
     margin-top: 0;
 }
 
+/* Gradient clipping for major page titles */
+h1 {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
 /* Header & Navbar */
 nav {
     font-family: var(--font-body);
     padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--color-border);
     display: flex;
     flex-wrap: wrap;
@@ -208,7 +244,7 @@ nav {
 #hero-image {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.55)), url('../images/hero1-antoine-beauvillain-zY_NaksFH1k-unsplash.webp');
+    background-image: linear-gradient(rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0.3)), url('../images/hero1-antoine-beauvillain-zY_NaksFH1k-unsplash.webp');
     background-size: cover;
     background-position: center;
 }
@@ -220,15 +256,26 @@ nav {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 90%;
+    max-width: 650px;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-lg);
 }
 
 #hero-text h1 {
     font-size: 2.8rem;
     font-weight: 800;
     color: #ffffff;
-    letter-spacing: -0.05rem;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
     margin: 0;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    display: inline-block;
 }
 
 /* Short Info Section */
@@ -236,28 +283,39 @@ nav {
     color: var(--color-text-main);
     display: flex;
     flex-direction: column;
-    gap: 45px;
-    padding: 50px 24px;
-    background-color: var(--color-surface);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border);
+    gap: 30px;
+    padding: 30px 10px;
+    background-color: transparent;
+    border: none;
     margin-bottom: 40px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
 }
 
 .column {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 45px 30px;
+    box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
     text-align: center;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.column:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.12), 0 8px 10px -6px rgba(79, 70, 229, 0.08);
+    border-color: rgba(99, 102, 241, 0.4);
 }
 
 .short-info-text {
     margin: 0;
     font-size: 1.15rem;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--color-text-muted);
     max-width: 600px;
     text-align: left;
@@ -481,12 +539,13 @@ article {
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
 article:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.12), 0 8px 10px -6px rgba(79, 70, 229, 0.08);
+    border-color: rgba(99, 102, 241, 0.4);
 }
 
 .article-heading {
@@ -517,7 +576,7 @@ article:hover {
 .article-text {
     padding: 25px;
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--color-text-muted);
     text-align: left;
 }
@@ -647,11 +706,13 @@ article:hover {
 }
 
 .contact-inner {
-    background-color: var(--color-surface);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
-    padding: 40px 30px;
+    box-shadow: var(--shadow-md);
+    padding: 45px 35px;
     width: 100%;
 }
 
@@ -703,10 +764,10 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 12px 16px;
+    padding: 14px 18px;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    background-color: var(--color-bg);
+    background-color: rgba(255, 255, 255, 0.6);
     font-family: var(--font-body);
     font-size: 1rem;
     color: var(--color-text-main);
@@ -719,7 +780,7 @@ textarea:focus {
     outline: none;
     border-color: var(--color-primary);
     background-color: var(--color-surface);
-    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.18);
 }
 
 textarea {
@@ -775,14 +836,22 @@ textarea {
         height: 500px;
     }
 
+    #hero-text {
+        left: auto;
+        right: 6%;
+        transform: translateY(-50%);
+        width: 300px;
+        padding: 40px 30px;
+    }
+
     #hero-text h1 {
-        font-size: 3.8rem;
+        font-size: 2.4rem;
     }
 
     .short-info {
         flex-direction: row;
         gap: 30px;
-        padding: 50px 30px;
+        padding: 40px 10px;
     }
 
     .column {
