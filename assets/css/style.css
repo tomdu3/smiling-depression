@@ -560,10 +560,10 @@ article:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(15, 23, 42, 0.7);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    padding: 20px;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    padding: 10px 15px;
 }
 
 .article-title h2 {
@@ -903,17 +903,18 @@ textarea {
     }
 
     .article-title {
-        top: 0;
+        top: auto;
         bottom: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(15, 23, 42, 0.75);
+        background: rgba(15, 23, 42, 0.55);
+        padding: 10px 8px;
     }
 
     .article-title h2 {
         text-align: center;
-        padding: 20px;
+        padding: 0;
     }
 
     .article-text {
@@ -980,4 +981,21 @@ textarea {
     .contact-inner {
         flex: 1;
     }
+}
+
+/* Symptoms Articles Background Images */
+#article-1 > .article-heading {
+    background-image: url('../images/caju-gomes-QDq3YliZg48-unsplash.webp');
+}
+
+#article-2 > .article-heading {
+    background-image: url('../images/nicholas-kusuma-xb2DaEeX8jk-unsplash.webp');
+}
+
+#article-3 > .article-heading {
+    background-image: url('../images/pexels-gratisography-1990.webp');
+}
+
+#article-4 > .article-heading {
+    background-image: url('../images/pexels-yan-krukov-7640764.webp');
 }
